@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="TabellaCss.css" rel="stylesheet" >
+        <script>
+
+            function CreaTabella() {
+                
+                document.open();
+                var temp = prompt("Inserire il numero di colonne desiderate");
+                var temp1 = prompt("Inserire il numero di righe desiderate")
+
+                var tempN = parseInt(temp);
+                var temp1N = parseInt(temp1);
+
+                var tabStart = "<table border =1>";
+                var tabEnd = "</table>";
+                var trStart = "<tr>";
+                var trEnd = "</tr>";
+                var tdStart = "<td  style=\"width: 40px ; height: 40px\">";
+                var tdEnd = "</td>";
+
+                document.write(tabStart);
+                for (var i = 0; i < temp1N; i++) {
+                    document.write(trStart);
+                    for (var j = 0; j < tempN; j++) {
+                        document.write(tdStart, tdEnd);
+                    }
+                    document.write(trEnd);
+                }
+                document.write(tabEnd);
+                document.close();
+            }
+
+
+
+        </script>
+    </head>
+    <body>
+
+        <div id="tabella" style="width: 400px ; height: 400px ; border: 1px solid black" ></div>
+
+        <input id="creaTab"  type="button" value="Creazione Tabella" onclick="CreaTabella()" style="position: absolute ; top: 500px ; left: 400px">
+
+
+
+    </body>
+</html>
